@@ -70,6 +70,10 @@ Le développement suit un phasage en 3 étapes, détaillé dans le cahier des ch
 - **Phase 2** : paiement, certification, suivi enrichi
 - **Phase 3** : programme d'alternance, communauté, lien entreprises partenaires
 
+## Contribuer
+
+Les changements sur `main` passent par une pull request, avec CI obligatoire avant fusion. Voir les templates d'issue disponibles dans l'onglet Issues.
+
 ## Licence
 
-Ce projet est distribué sous licence [MIT](LICENSE).
+Ce projet est distribué sous licence [MIT](LICENSE).# test
