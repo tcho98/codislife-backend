@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Créer le fichier .env pour la CI
+        run: |
+          echo "POSTGRES_DB=codislife" >> .env
+          echo "POSTGRES_USER=codislife" >> .env
+          echo "POSTGRES_PASSWORD=ci_test_password" >> .env
+
+      - name: Build et lancement des conteneurs
+        run: docker compose up --build -d
+
+      - name: Lancer les tests
+        run: docker compose exec -T web python manage.py test
