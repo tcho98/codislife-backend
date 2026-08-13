@@ -72,4 +72,4 @@ Le développement suit un phasage en 3 étapes, détaillé dans le cahier des ch
 
 ## Licence
 
-À définir.
+Ce projet est distribué sous licence [MIT](LICENSE).
