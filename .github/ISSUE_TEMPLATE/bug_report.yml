@@ -1,0 +1,35 @@
+name: Signalement de bug
+description: Signaler un comportement inattendu ou un dysfonctionnement
+title: "[Bug] "
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du problème
+      description: Que se passe-t-il ? Que devrait-il se passer à la place ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      description: Décris les étapes précises pour reproduire le bug
+      placeholder: |
+        1. Lancer docker compose up
+        2. Aller sur http://localhost
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environnement
+      options:
+        - Local (Docker Compose)
+        - Production (VPS)
+    validations:
+      required: true

@@ -1,0 +1,38 @@
+name: Demande de fonctionnalité
+description: Proposer une nouvelle fonctionnalité ou une amélioration
+title: "[Feature] "
+labels: ["enhancement"]
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quel problème cette fonctionnalité résout-elle ?
+      description: Décris le besoin ou la limitation actuelle
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+      description: Comment imagines-tu que ça devrait fonctionner ?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module concerné
+      description: Cohérent avec les modules du cahier des charges
+      options:
+        - Catalogue de formations
+        - Contenu pédagogique
+        - Suivi professionnel
+        - Programme d'alternance
+        - Communauté
+        - Paiement
+        - Certification
+        - Autre / infrastructure
+    validations:
+      required: true
